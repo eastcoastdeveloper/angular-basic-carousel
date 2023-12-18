@@ -1,0 +1,48 @@
+<div class="wrapper element-shadow element-margin-top">
+  <div class="slider-bg"></div>
+  <div class="tagLine">Top Four AI Books of 2023</div>
+  <div id="slider">
+    <div class="content">
+      <div *ngIf="loaded" class="books-wrapper">
+        <img
+          onerror="this.onerror=null;this.src='path-to-404-image'"
+          [src]="getSliderImage(currentIndex)"
+          class="element-shadow"
+          alt="{{ result[currentIndex].altText }}"
+        />
+        <div
+          class="product-info"
+          [ngClass]="{ 'show-product-info': productInfo }"
+        >
+          {{ result[currentIndex].description }}
+        </div>
+        <div class="purchase-info">
+          <div>
+            <a
+              href="{{ result[currentIndex].link }}"
+              target="_blank"
+              class="purchase-btn element-shadow"
+              >Purchase Book</a
+            >
+            <div (click)="productInfo = !productInfo" class="info-wrapper">
+              <span>&#x2139;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation">
+      <div (click)="prevBook()" class="prev"><span>&#10140;</span></div>
+      <div (click)="nextBook()" class="next"><span>&#10140;</span></div>
+    </div>
+  </div>
+  <div class="dots">
+    <input
+      type="radio"
+      [checked]="item.status"
+      name="arrPos"
+      *ngFor="let item of result; let i = index"
+      (click)="changeShowcase(i)"
+    />
+  </div>
+</div>
