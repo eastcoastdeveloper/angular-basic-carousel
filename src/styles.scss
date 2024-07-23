@@ -21,28 +21,6 @@ body {
   margin: 20px;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  border-top: 1px solid #313b3f;
-  padding: 5px 5px 1px 5px;
-  box-sizing: border-box;
-  width: 100%;
-  .icon-grid {
-    justify-content: center;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: repeat(3, 35px);
-    a {
-      width: 35px;
-      display: block;
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   footer,
   .website {
