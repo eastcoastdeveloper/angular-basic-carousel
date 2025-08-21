@@ -43,7 +43,7 @@ export class AppComponent {
     this.getCurrentIndex();
     this.resetValues();
     this.currentIndex++;
-    this.currentIndex > this.result.length - 1 ? (this.currentIndex = 0) : '';
+    this.currentIndex > this.result.length - 1 ? (this.currentIndex = 0) : null;
     this.result[this.currentIndex].status = true;
   }
 
