@@ -11,7 +11,7 @@ import { DataInterface } from './data.interface';
 export class AppComponent {
   private unsubscribe$ = new Subject<boolean>();
   result: DataInterface[] = [];
-  currentIndex: number = 0;
+  currentIndex: number = 2;
   productInfo: boolean = false;
   loaded: boolean = false;
 
