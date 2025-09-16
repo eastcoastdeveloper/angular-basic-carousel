@@ -116,12 +116,8 @@ a {
   }
 }
 
-.dots input[type='radio']:nth-child(2) {
+.dots input[type='radio'] {
   margin: 0 0 0 10px;
-}
-
-.dots input[type='radio']:nth-child(3) {
-  margin: 0 10px;
 }
 
 .content {
